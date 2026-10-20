@@ -1641,6 +1641,14 @@ textarea:focus-visible,
 :root            { --c-on-color: #F6EFE3; }
 [data-theme="dark"] { --c-on-color: #F4ECDB; }
 
+/* "Request a quote" nel menu: le regole di .nav__links a (colore scuro,
+   terracotta al passaggio e sulla pagina attiva, sottolineatura) vincevano
+   su .btn--primary, e la scritta spariva sul fondo terracotta. */
+.nav__links .nav__cta a.btn,
+.nav__links .nav__cta a.btn:hover,
+.nav__links .nav__cta a.btn.is-active { color: var(--c-ivory); }
+.nav__links .nav__cta a.btn::after { display: none; }
+
 .cta-strip,
 .cta-strip h2,
 .cta-strip .eyebrow { color: var(--c-on-color); }
